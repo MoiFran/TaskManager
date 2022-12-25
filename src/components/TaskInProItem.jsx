@@ -17,7 +17,7 @@ export const TaskInProItem = ({ inProTask, finishTask }) => {
           </Card.Subtitle>
           <Card.Text>{inProTask.description}</Card.Text>
           <Card.Subtitle className="mb-2 text-muted">
-            {inProTask.postDate}
+            Start Date: {inProTask.postDate}
           </Card.Subtitle>
 
           <Button variant="primary" onClick={gestorDone}>

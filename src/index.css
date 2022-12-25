@@ -3,7 +3,7 @@ body {
  padding: 0;
  width: 100%;
  height: 100%;
-background:#4a588f;
+background: linear-gradient(0deg, #2737B1 0%, #6352FF 89%);
 
  
 }
@@ -39,7 +39,7 @@ background:#4a588f;
   flex-direction: column;
   align-items: center;
   padding: 1.5rem;
-  background-color: #8292e8;
+background: #727fe2ac;
   border-radius: 0.5rem;
   margin: 0.5rem;
 -webkit-box-shadow: 7px 14px 16px -4px rgba(66, 57, 66, 1);
