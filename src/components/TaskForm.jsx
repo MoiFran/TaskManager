@@ -82,37 +82,39 @@ export const TaskForm = () => {
   console.log("todo", task);
   return (
     <div className="Task-form">
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Form.Group className="mb-3">
-          <Form.Control
-            type="text"
-            placeholder="Title Task"
-            name=""
-            {...register("title")}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>lavel</Form.Label>
-          <Form.Select {...register("lavel")}>
-            <option value="normal">normal</option>
-            <option value="medio">medio</option>
-            <option value="urgente">urgente</option>
-          </Form.Select>
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Control
-            as="textarea"
-            rows={3}
-            placeholder="Description Task"
-            name=""
-            {...register("description")}
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit" value="addTask">
-          Submit
-        </Button>
-      </Form>
-
+      <div className="form-container">
+        <Form onSubmit={handleSubmit(onSubmit)} className="form-style">
+          <Form.Group className="mb-3">
+            <Form.Control
+              type="text"
+              placeholder="Title"
+              name=""
+              {...register("title")}
+              className="input-group"
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Select {...register("lavel")} className="input-group">
+              <option value="normal">normal</option>
+              <option value="medio">medio</option>
+              <option value="urgente">urgente</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Control
+              as="textarea"
+              rows={3}
+              placeholder="Description Task"
+              name=""
+              {...register("description")}
+              className="input-group"
+            />
+          </Form.Group>
+          <Button variant="primary" type="submit" value="addTask">
+            Submit
+          </Button>
+        </Form>
+      </div>
       <Container>
         <Row>
           <Col md={4}>

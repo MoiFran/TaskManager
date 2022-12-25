@@ -3,8 +3,8 @@ import { TaskInProItem } from "./TaskInProItem";
 
 export const TaskInPro = ({ inProgressTask, finishTask }) => {
   return (
-    <div>
-      <h2>in progrees Task</h2>
+    <div className="task-container">
+      <h2>Tasks in progress</h2>
       {inProgressTask.map((inProTask) => {
         return (
           <TaskInProItem

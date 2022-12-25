@@ -3,8 +3,8 @@ import { TaskDoneItem } from "./TaskDoneItem";
 
 export const TaskDone = ({ doneTask }) => {
   return (
-    <div>
-      <h2>Done TaskS</h2>
+    <div className="task-container">
+      <h2>Completed tasks</h2>
       {doneTask.map((doneTask) => {
         return <TaskDoneItem key={doneTask.id} doneTask={doneTask} />;
       })}

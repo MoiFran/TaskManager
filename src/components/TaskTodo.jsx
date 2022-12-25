@@ -3,8 +3,8 @@ import { TodoTaskItem } from "./TodoTaskItem";
 
 export const TaskTodo = ({ todoTask, toStart, deleteTask }) => {
   return (
-    <div>
-      <h2>Task todo </h2>
+    <div className="task-container">
+      <h2>Tasks to do </h2>
       <div>
         {todoTask.map((task) => {
           return (

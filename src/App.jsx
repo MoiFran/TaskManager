@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { TaskForm } from "./components/TaskForm";
+import "./index.css";
 
 function App() {
   return <TaskForm />;

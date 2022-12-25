@@ -12,7 +12,7 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
 
   return (
     <div key={task.id}>
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem" }} className="card-item">
         <Card.Body>
           <Card.Title>
             <h2>{task.title}</h2>

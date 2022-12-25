@@ -9,7 +9,7 @@ export const TaskInProItem = ({ inProTask, finishTask }) => {
 
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem" }} className="card-item">
         <Card.Body>
           <Card.Title>{inProTask.title}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
