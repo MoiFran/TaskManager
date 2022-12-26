@@ -81,8 +81,8 @@ export const TaskForm = () => {
   console.log("inprogre", inProgressTask);
   console.log("todo", task);
   return (
-    <div className="Task-form">
-      <div className="form-container">
+    <div>
+      <div className="form-container Task-form">
         <Form onSubmit={handleSubmit(onSubmit)} className="form-style">
           <Form.Group className="mb-3">
             <Form.Control

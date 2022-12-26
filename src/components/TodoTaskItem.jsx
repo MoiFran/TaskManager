@@ -27,11 +27,15 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
           <Card.Subtitle className="mb-2 text-muted">
             Post Date: {task.postDate}
           </Card.Subtitle>
-          <Button variant="primary" onClick={gestorStart}>
-            start
+          <Button variant="primary" onClick={gestorStart} className="btn-start">
+            Start
           </Button>
-          <Button variant="primary" onClick={gestorDelete}>
-            delete
+          <Button
+            className="btn-delete"
+            variant="danger"
+            onClick={gestorDelete}
+          >
+            🗑
           </Button>
         </Card.Body>
       </Card>
