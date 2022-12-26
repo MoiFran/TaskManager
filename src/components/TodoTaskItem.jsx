@@ -14,9 +14,7 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
     <div key={task.id}>
       <Card style={{ width: "18rem" }} className="card-item">
         <Card.Body>
-          <Card.Title>
-            <h2>{task.title}</h2>
-          </Card.Title>
+          <Card.Title>{task.title}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
             Importancia : {task.lavel}
           </Card.Subtitle>
