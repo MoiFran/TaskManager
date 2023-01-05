@@ -22,19 +22,18 @@ export const TaskForm = () => {
       : []
   );
 
-  const { register, handleSubmit, reset } = useForm({
-    defaultValues: {
-      id: uuidv4(),
-      postDate: moment().format("YYYY-MM-DD"),
-    },
-  });
-
   const [doneTask, setDoneTask] = useState(
     localStorage.getItem("doneTask")
       ? JSON.parse(localStorage.getItem("doneTask"))
       : []
   );
 
+  const { register, handleSubmit, reset } = useForm({
+    defaultValues: {
+      id: uuidv4(),
+      postDate: moment().format("YYYY-MM-DD"),
+    },
+  });
   const onSubmit = (data) => {
     let newTask = [...task, data];
     setTask(newTask);
@@ -78,6 +77,13 @@ export const TaskForm = () => {
     localStorage.setItem("task", JSON.stringify(newStore));
     setTask(newStore);
   };
+
+  const deleteTaskDone = (id) => {
+    let doneTasks = JSON.parse(localStorage.getItem("doneTask"));
+    let newDoneTask = doneTasks.filter((item) => item.id !== id);
+    localStorage.setItem("doneTask", JSON.stringify(newDoneTask));
+    setDoneTask(newDoneTask);
+  };
   console.log("inprogre", inProgressTask);
   console.log("todo", task);
   return (
@@ -110,8 +116,8 @@ export const TaskForm = () => {
               className="input-group"
             />
           </Form.Group>
-          <Button variant="primary" type="submit" value="addTask">
-            Submit
+          <Button variant="info" type="submit" value="addTask">
+            ➕
           </Button>
         </Form>
       </div>
@@ -130,8 +136,8 @@ export const TaskForm = () => {
               finishTask={finishTask}
             />
           </Col>
-          <Col md={4}>
-            <TaskDone doneTask={doneTask} />
+          <Col md={4} sm={12}>
+            <TaskDone doneTask={doneTask} deleteTaskDone={deleteTaskDone} />
           </Col>
         </Row>
       </Container>
