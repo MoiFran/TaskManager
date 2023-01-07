@@ -13,15 +13,18 @@ export const TaskDoneItem = ({ doneTask, deleteTaskDone }) => {
       <Card style={{ width: "18rem" }} className="card-item">
         <Card.Body>
           <Card.Title>
-            {doneTask.title}{" "}
+            <h4>Title</h4> {doneTask.title}
             <button className="btn-delete-done" onClick={deleteTask}>
               ❌
             </button>
           </Card.Title>
+          <Card.Text>
+            <h5>Description: </h5>
+            {doneTask.description}
+          </Card.Text>
           <Card.Subtitle className="mb-2 text-muted">
-            {moment().format("YYYY-MM-DD")}
+            Done Date: {moment().format("YYYY-MM-DD  HH:mm:ss")}
           </Card.Subtitle>
-          <Card.Text>{doneTask.description}</Card.Text>
         </Card.Body>
       </Card>
     </div>

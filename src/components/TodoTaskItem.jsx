@@ -22,7 +22,9 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
           className="card-item"
         >
           <Card.Body>
-            <Card.Title>{task.title}</Card.Title>
+            <Card.Title>
+              <h4>Title</h4> {task.title}
+            </Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
               Importancia : {task.lavel}
             </Card.Subtitle>
@@ -52,7 +54,9 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
       ) : (
         <Card style={{ width: "18rem" }} className="card-item">
           <Card.Body>
-            <Card.Title>{task.title}</Card.Title>
+            <Card.Title>
+              <h4>Title</h4> {task.title}
+            </Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
               Importancia : {task.lavel}
             </Card.Subtitle>

@@ -87,7 +87,7 @@ export const TaskForm = () => {
   console.log("inprogre", inProgressTask);
   console.log("todo", task);
   return (
-    <div className=" Task-form">
+    <div className="big-container">
       <div className="form-container ">
         <Form onSubmit={handleSubmit(onSubmit)} className="form-style">
           <Form.Group className="mb-3">
@@ -116,31 +116,28 @@ export const TaskForm = () => {
               className="input-group"
             />
           </Form.Group>
-          <Button variant="info" type="submit" value="addTask">
+          <button
+            className="btn-add"
+            variant="info"
+            type="submit"
+            value="addTask"
+          >
             ➕
-          </Button>
+          </button>
         </Form>
       </div>
-      <Container>
-        <Row>
-          <Col md={4}>
-            <TaskTodo
-              todoTask={task}
-              toStart={toStart}
-              deleteTask={deleteTaskTodo}
-            />
-          </Col>
-          <Col md={4}>
-            <TaskInPro
-              inProgressTask={inProgressTask}
-              finishTask={finishTask}
-            />
-          </Col>
-          <Col md={4} sm={12}>
-            <TaskDone doneTask={doneTask} deleteTaskDone={deleteTaskDone} />
-          </Col>
-        </Row>
-      </Container>
+
+      <div className="task-container">
+        <TaskTodo
+          todoTask={task}
+          toStart={toStart}
+          deleteTask={deleteTaskTodo}
+        />
+
+        <TaskInPro inProgressTask={inProgressTask} finishTask={finishTask} />
+
+        <TaskDone doneTask={doneTask} deleteTaskDone={deleteTaskDone} />
+      </div>
     </div>
   );
 };
