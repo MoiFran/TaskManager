@@ -99,6 +99,22 @@ h2{
     color: #171515;
 }
 
+.btn-add{
+  background-color: rgb(67, 164, 249);
+  border:  1px solid rgb(67, 164, 249);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  width: 100px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.btn-add:hover{
+  border: 1px solid #b8d7eb;
+
+}
+
 .btn-start{
   margin: 1rem;
   background-color: green;
@@ -113,12 +129,18 @@ h2{
   background-color: #FFFFFF;
 }
 
+.btn-delete:hover{
+  border: none;
+  background-color: #ed3535;
+}
+
 .btn-delete-done{
   border: none;
   background-color: #FFFFFF;
   width: 1.6rem;
   align-items: center;
   margin-left: 6rem;
+  padding: 1.5rem;
 }
 
 .btn-delete-done :hover{

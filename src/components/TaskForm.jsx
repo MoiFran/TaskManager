@@ -122,7 +122,7 @@ export const TaskForm = () => {
             type="submit"
             value="addTask"
           >
-            ➕
+            ➕ ADD
           </button>
         </Form>
       </div>

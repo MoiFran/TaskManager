@@ -14,9 +14,6 @@ export const TaskDoneItem = ({ doneTask, deleteTaskDone }) => {
         <Card.Body>
           <Card.Title>
             <h4>Title</h4> {doneTask.title}
-            <button className="btn-delete-done" onClick={deleteTask}>
-              ❌
-            </button>
           </Card.Title>
           <Card.Text>
             <h5>Description: </h5>
@@ -26,6 +23,9 @@ export const TaskDoneItem = ({ doneTask, deleteTaskDone }) => {
             Done Date: {moment().format("YYYY-MM-DD  HH:mm:ss")}
           </Card.Subtitle>
         </Card.Body>
+        <button className="btn-delete-done" onClick={deleteTask}>
+          ❌
+        </button>
       </Card>
     </div>
   );
