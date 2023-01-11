@@ -37,13 +37,9 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
             >
               Start
             </Button>
-            <Button
-              className="btn-delete"
-              variant="danger"
-              onClick={gestorDelete}
-            >
+            <button className="btn-delete" onClick={gestorDelete}>
               🗑
-            </Button>
+            </button>
           </Card.Body>
         </Card>
       ) : (
