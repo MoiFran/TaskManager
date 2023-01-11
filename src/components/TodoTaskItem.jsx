@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Spinner from "react-bootstrap/Spinner";
 
 export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
   const gestorStart = () => {
@@ -13,17 +14,11 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
   return (
     <div key={task.id}>
       {task.lavel === "urgente" ? (
-        <Card
-          style={{
-            width: "18rem",
-
-            border: "6px solid rgba(255,89,89)",
-          }}
-          className="card-item"
-        >
+        <Card className="card-item">
           <Card.Body>
+            <Spinner animation="grow" variant="danger" size="sm" />
             <Card.Title>
-              <h4>Title</h4> {task.title}
+              <h4> Title</h4> {task.title}
             </Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
               Importancia : {task.lavel}
@@ -74,9 +69,9 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
             >
               Start
             </Button>
-            <Button className="btn-delete" onClick={gestorDelete}>
+            <button className="btn-delete" onClick={gestorDelete}>
               🗑
-            </Button>
+            </button>
           </Card.Body>
         </Card>
       )}

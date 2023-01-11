@@ -24,7 +24,7 @@ export const TaskInProItem = ({ inProTask, finishTask }) => {
             {inProTask.description}
           </Card.Text>
           <Card.Subtitle className="mb-2 text-muted">
-            Start Date: {moment().format("YYYY-MM-DD HH:mm:ss")}
+            Start Date: {moment().format("MM-DD-YYYY HH:mm")}
           </Card.Subtitle>
 
           <Button variant="primary" onClick={gestorDone}>
