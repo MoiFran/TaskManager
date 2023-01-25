@@ -3,12 +3,26 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Spinner from "react-bootstrap/Spinner";
 
+import Modal from "react-bootstrap/Modal";
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => {
+    setShow(false);
+  };
+  const handleShow = () => setShow(true);
+
+  const deleteTasks = () => {
+    deleteTask(task.id);
+    handleClose();
+    console.log(" work ");
+  };
+
   const gestorStart = () => {
     toStart(task.id);
-  };
-  const gestorDelete = () => {
-    deleteTask(task.id);
   };
 
   return (
@@ -18,7 +32,7 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
           <Card.Body>
             <Spinner animation="grow" variant="danger" size="sm" />
             <Card.Title>
-              <h4> Title</h4> {task.title}
+              <h3> Title</h3> {task.title}
             </Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
               Importancia : {task.lavel}
@@ -37,7 +51,7 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
             >
               Start
             </Button>
-            <button className="btn-delete" onClick={gestorDelete}>
+            <button className="btn-delete" onClick={handleShow}>
               🗑
             </button>
           </Card.Body>
@@ -71,6 +85,20 @@ export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
           </Card.Body>
         </Card>
       )}
+      <Modal show={show} onHide={handleClose} animation={false} size="sm">
+        <Modal.Header closeButton className="p-3 mb-2 bg-danger text-white">
+          <Modal.Title>Delete {task.titulo}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>quieres eliminar esta tarea </Modal.Body>
+        <Modal.Footer>
+          <Button variant="danger" onClick={deleteTasks}>
+            si
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            no
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
