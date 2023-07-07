@@ -57,10 +57,10 @@ export const TodoTaskItem = ({ task, toStart, deleteTask , finishTask}) => {
               Start
             </Button>
             <Button
-              variant="green"
+              variant="success"
               onClick={gestorTerminar}
               className="btn-start"
-            > Termnar   </Button>
+            > Terminado   </Button>
             <button className="btn-delete" onClick={handleShow}>
               🗑
             </button>
@@ -90,10 +90,10 @@ export const TodoTaskItem = ({ task, toStart, deleteTask , finishTask}) => {
               Start
             </Button>
               <Button
-              variant="green"
+              variant="success"
               onClick={gestorTerminar}
               className="btn-start"
-            > Termnar   </Button>
+            > Terminado  </Button>
             <button className="btn-delete" onClick={handleShow}>
               🗑
             </button>
