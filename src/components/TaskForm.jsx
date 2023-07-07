@@ -132,6 +132,7 @@ export const TaskForm = () => {
           todoTask={task}
           toStart={toStart}
           deleteTask={deleteTaskTodo}
+   finishTask ={finishTask}
         />
 
         <TaskInPro inProgressTask={inProgressTask} finishTask={finishTask} />
