@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TodoTaskItem } from "./TodoTaskItem";
 
-export const TaskTodo = ({ todoTask, toStart, deleteTask }) => {
+export const TaskTodo = ({ todoTask, toStart, deleteTask, finishTask}) => {
   return (
     <div className="task-block-container">
       <h2> ({todoTask.length}) Tasks to do </h2>
@@ -13,6 +13,7 @@ export const TaskTodo = ({ todoTask, toStart, deleteTask }) => {
               task={task}
               toStart={toStart}
               deleteTask={deleteTask}
+              finishTask={finishTask}
             />
           );
         })}
