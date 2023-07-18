@@ -7,7 +7,7 @@ import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export const TodoTaskItem = ({ task, toStart, deleteTask , finishTask}) => {
+export const TodoTaskItem = ({ task, toStart, deleteTask }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => {
@@ -25,10 +25,7 @@ export const TodoTaskItem = ({ task, toStart, deleteTask , finishTask}) => {
     toStart(task.id);
   };
 
-  const gestorTerminar =()=>{
-    finishTask(task.id);
-    console.log("work")
-  };
+  
 
   return (
     <div key={task.id}>
@@ -56,11 +53,7 @@ export const TodoTaskItem = ({ task, toStart, deleteTask , finishTask}) => {
             >
               Start
             </Button>
-            <Button
-              variant="success"
-              onClick={gestorTerminar}
-              className="btn-start"
-            > Terminado   </Button>
+
             <button className="btn-delete" onClick={handleShow}>
               🗑
             </button>
@@ -89,11 +82,7 @@ export const TodoTaskItem = ({ task, toStart, deleteTask , finishTask}) => {
             >
               Start
             </Button>
-              <Button
-              variant="success"
-              onClick={gestorTerminar}
-              className="btn-start"
-            > Terminado  </Button>
+
             <button className="btn-delete" onClick={handleShow}>
               🗑
             </button>
